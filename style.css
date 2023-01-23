@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.blurry-bg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.623)),
+    url(pexels-pille-kirsi-980393.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blurry-bg::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(4px);
+}
+
+.child {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #fff;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.child p {
+  font-family: Arial, Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+.child img {
+  width: 350px;
+  height: 250px;
+}
